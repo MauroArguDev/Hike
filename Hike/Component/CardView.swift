@@ -10,6 +10,7 @@ import SwiftUI
 struct CardView: View {
     
     // MARK: - Properties
+    @State private var isShowingSheet = false
     @State private var imageNumber = 1
     @State private var randomNumber = 1
     
@@ -43,9 +44,14 @@ struct CardView: View {
                         Spacer()
                         
                         Button {
-                            print("The button was pressed")
+                            isShowingSheet.toggle()
                         } label: {
                             CustomButtonView()
+                        }
+                        .sheet(isPresented: $isShowingSheet) {
+                            SettingsView()
+                                .presentationDragIndicator(.visible)
+                                .presentationDetents([.medium, .large])
                         }
                     }
                     
