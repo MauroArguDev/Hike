@@ -19,6 +19,7 @@
 		6AEA75322C865255009962EF /* CustomCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AEA75312C865255009962EF /* CustomCircleView.swift */; };
 		6AEA75342C865397009962EF /* MotionAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AEA75332C865397009962EF /* MotionAnimationView.swift */; };
 		6AEA75372C8657B8009962EF /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AEA75362C8657B8009962EF /* SettingsView.swift */; };
+		6AF0A1F02C99F924000B2871 /* CustomListRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AF0A1EF2C99F924000B2871 /* CustomListRowView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		6AEA75312C865255009962EF /* CustomCircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCircleView.swift; sourceTree = "<group>"; };
 		6AEA75332C865397009962EF /* MotionAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionAnimationView.swift; sourceTree = "<group>"; };
 		6AEA75362C8657B8009962EF /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		6AF0A1EF2C99F924000B2871 /* CustomListRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomListRowView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 				6AEA752D2C8646E6009962EF /* CustomButtonView.swift */,
 				6AEA75312C865255009962EF /* CustomCircleView.swift */,
 				6AEA75332C865397009962EF /* MotionAnimationView.swift */,
+				6AF0A1EF2C99F924000B2871 /* CustomListRowView.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -187,6 +190,7 @@
 			files = (
 				6AEA751A2C863033009962EF /* ContentView.swift in Sources */,
 				6AEA75322C865255009962EF /* CustomCircleView.swift in Sources */,
+				6AF0A1F02C99F924000B2871 /* CustomListRowView.swift in Sources */,
 				6AEA75262C863557009962EF /* CardView.swift in Sources */,
 				6AEA75182C863033009962EF /* HikeApp.swift in Sources */,
 				6AEA752E2C8646E6009962EF /* CustomButtonView.swift in Sources */,

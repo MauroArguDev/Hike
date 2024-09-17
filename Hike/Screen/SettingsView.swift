@@ -9,8 +9,8 @@ import SwiftUI
 
 struct SettingsView: View {
     var body: some View {
-        Section {
-            List {
+        List {
+            Section {
                 HStack {
                     Spacer()
                     
@@ -58,8 +58,30 @@ struct SettingsView: View {
                 .padding(.bottom, 16)
                 .frame(maxWidth: .infinity)
             }
+            .listRowSeparator(.hidden)
+            
+            Section(
+                header: Text("ABOUT THE APP"),
+                footer: HStack {
+                    Spacer()
+                    Text("Copyright © All right reserved.")
+                    Spacer()
+                }
+                    .padding(.vertical, 8 )
+            ) {
+                CustomListRowView(title: "Application", image: "apps.iphone", content: "HIKE", color: .blue)
+                
+                CustomListRowView(title: "Compatibility", image: "info.circle", content: "iOS, iPadOS", color: .red)
+                
+                CustomListRowView(title: "Technology", image: "swift", content: "Swift", color: .orange)
+                
+                CustomListRowView(title: "Version", image: "gear", content: "1.0", color: .purple)
+                
+                CustomListRowView(title: "Developer", image: "ellipsis.curlybraces", content: "Mauro Argumedo", color: .mint)
+                
+                CustomListRowView(title: "Website", image: "globe.americas", color: .pink, linkLabel: "Github", linkDestination: "https://github.com/MauroArguDev")
+            }
         }
-        .listRowSeparator(.hidden)
     }
 }
 
