@@ -8,6 +8,16 @@
 import SwiftUI
 
 struct SettingsView: View {
+    
+    // MARK: - Properties
+    private let altertnateAppIcons: [String] = [
+        "AppIcon-MagnifyingGlass",
+        "AppIcon-Map",
+        "AppIcon-Mushroom",
+        "AppIcon-Camera",
+        "AppIcon-Campfire",
+    ]
+    
     var body: some View {
         List {
             Section {
@@ -59,6 +69,37 @@ struct SettingsView: View {
                 .frame(maxWidth: .infinity)
             }
             .listRowSeparator(.hidden)
+            
+            Section(header: Text("Alternate Icons")) {
+                ScrollView(.horizontal, showsIndicators: false) {
+                    HStack(spacing: 12) {
+                        ForEach(altertnateAppIcons.indices, id: \.self) { item in
+                            Button {
+                                UIApplication.shared.setAlternateIconName(altertnateAppIcons[item]) { error in
+                                    if let error = error {
+                                        print("Failed request to update the app's icon \(altertnateAppIcons[item]): \(String(error.localizedDescription))")
+                                    } else {
+                                        print("Sucess! You have changed the app's icon")
+                                    }
+                                }
+                            } label: {
+                                Image("\(altertnateAppIcons[item])-Preview")
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(width: 70, height: 70)
+                            }
+                        .buttonStyle(.borderless)
+                        }
+                    }
+                }.padding(.top, 12)
+                
+                Text("Choose your favourite app icon from the collectino above.")
+                    .frame(minWidth: 0, maxWidth: .infinity)
+                    .multilineTextAlignment(.center)
+                    .foregroundStyle(.secondary)
+                    .font(.footnote)
+                    .padding(.bottom, 12)
+            }
             
             Section(
                 header: Text("ABOUT THE APP"),
